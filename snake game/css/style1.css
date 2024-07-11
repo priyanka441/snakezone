@@ -1,0 +1,126 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.body{
+   background:url("../assests/snake2.jpg");
+   min-height: 100vh;
+   background-size: 100vw 100vh;
+   background-repeat: no-repeat;
+   display:flex;
+   justify-content: center;
+   align-items: center;
+
+} 
+#scoreBox{
+     position: absolute;
+     top:30px;
+     right:221px;
+     font-size: 30px;
+     font-weight: bold;
+     font-family:'Courier New', Courier, monospace;
+     color:violet;
+}
+
+
+#hiscoreBox{
+    position: absolute;
+    top:70px;
+    right:130px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family:'Courier New', Courier, monospace;
+    color:violet;
+}
+
+
+#board{
+    background: linear-gradient(rgb(136, 136, 147),pink );
+     width:92vmin; /* vmin means min between vw and vh */
+    height :92vmin;
+    border: 2px solid black;
+    display: grid;
+    grid-template-rows: repeat(18,1fr);
+    grid-template-columns: repeat(18,1fr);
+}
+
+/* //snake head of violet color */
+.head{
+    background-color: violet;
+    border:2px solid white;
+    transform: scale(1.02);
+    border-radius:8px;
+
+}
+/* snake tail of purple  */
+.snake{
+    background-color: purple;
+    border:.25vmin solid white;
+    border-radius:12px;
+
+}
+ /* food of aquamarine color */
+.food{
+    background-color:rgb(231, 153, 153);
+    border:.25vmin solid black;
+    border-radius:8px;
+    
+
+}
+
+
+/* Media queries for different screen sizes */
+@media (max-width: 768px) {
+    #scoreBox, #hiscoreBox {
+        font-size: 3vmin;
+    }
+
+    #scoreBox {
+        top:8vmin;
+        right: 20vmin;
+        color:blue;
+    }
+
+    #hiscoreBox {
+        top: 12vmin;
+        right: 20vmin;
+        color:blue;
+    }
+
+    #board {
+        width: 88vmin;
+        height: 88vmin;
+    }
+
+    .head, .snake, .food {
+        border-radius: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    #scoreBox, #hiscoreBox {
+        font-size: 4vmin;
+    }
+
+    #scoreBox {
+        top: 6vmin;
+        right: 6vmin;
+        color:blue;
+    }
+
+    #hiscoreBox {
+        top: 12vmin;
+        right: 6vmin;
+        color:blue;
+    }
+
+    #board {
+        width: 85vmin;
+        height: 85vmin;
+    }
+
+    .head, .snake, .food {
+        border-radius: 5px;
+    }
+}
